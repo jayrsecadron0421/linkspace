@@ -1,0 +1,168 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.logout-btn {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* PAGE CONTAINER */
+.feed-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.feed {
+    width: 1000px;
+}
+
+/* TOP WRAPPER */
+.profile-top {
+    position: relative;
+}
+
+/* COVER */
+.profile-cover {
+    width: 100%;
+    height: 280px;
+    background: #ddd;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* EDIT COVER BUTTON */
+.cover-edit {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    background: black;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* HEADER */
+.profile-header {
+    background: #bdbdbd;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin-top: -70px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    z-index: 2; /* 👈 ABOVE COVER */
+}
+
+/* AVATAR */
+.avatar-wrapper {
+    position: relative;
+    z-index: 3; /* 👈 ABOVE EVERYTHING */
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: white;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.profile-name {
+    margin-left: 20px;
+}
+
+.profile-name h2 {
+    margin: 0;
+}
+
+/* GRID */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* LEFT CARD */
+.post-card {
+    background: #cfcfcf;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* CREATE POST */
+.create-post {
+    background: #d9d9d9;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create-post textarea {
+    flex: 1;
+    border: none;
+    background: #eee;
+    padding: 12px 16px;
+    border-radius: 30px;
+    resize: none;
+}
+
+.post-btn {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
