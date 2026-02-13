@@ -22,6 +22,12 @@
                 <input name="name" placeholder="Name" required>
                 <input name="email" placeholder="Email" required>
                 <input name="password" placeholder="Password" type="password" required>
+                <select name="role_id" required>
+                    <option value="">Select Role</option>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                    @endforeach
+                </select>
                 <button>Create</button>
             </form>
         </div>
