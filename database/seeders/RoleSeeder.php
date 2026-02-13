@@ -11,11 +11,18 @@ class RoleSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run()
+    public function run(): void
     {
-        Role::insert([
-        ['name'=>'admin'],
-        ['name'=>'user']
-        ]);
+        $roles = [
+            ['id' => 1, 'name' => 'admin'],
+            ['id' => 2, 'name' => 'user'],
+        ];
+
+        foreach ($roles as $role) {
+            Role::updateOrCreate(
+                ['id' => $role['id']], 
+                ['name' => $role['name']]
+            );
+        }
     }
 }
