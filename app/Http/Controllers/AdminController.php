@@ -92,6 +92,10 @@ class AdminController extends Controller
         return view('admin.settings');
     }
 
+    public function security() {
+        return view('admin.security');
+    }
+
     public function updateProfile(Request $request)
     {
         $request->validate([

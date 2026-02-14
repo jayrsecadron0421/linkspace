@@ -29,7 +29,10 @@
         <!-- CREATE POST -->
         <form method="POST" action="/posts" enctype="multipart/form-data" class="create-post">
             @csrf
-            <textarea name="content" placeholder="What's on your mind?"></textarea>
+            <textarea name="content" 
+                      placeholder="What's on your mind?" 
+                      maxlength="255"
+                      required></textarea>
 
             <label>
                 <input type="file" name="media" hidden>
@@ -65,7 +68,11 @@
 
             <form method="POST" action="/comment/{{ $post->id }}" class="comment-box">
                 @csrf
-                <input class="comment-input" name="content" placeholder="Write a comment...">
+                <input class="comment-input" 
+                       name="content" 
+                       placeholder="Write a comment..." 
+                       maxlength="255"
+                       required>
             </form>
 
         </div>

@@ -46,7 +46,8 @@ Route::middleware(['auth','role:admin'])->group(function () {
     Route::get('/admin/users/search', [AdminController::class,'search']);
     Route::get('/admin/settings', [AdminController::class,'settings'])->name('admin.settings');
     Route::post('/admin/settings/profile', [AdminController::class,'updateProfile'])->name('admin.settings.profile');
-    Route::post('/admin/settings/password', [AdminController::class,'updatePassword'])->name('admin.settings.password');
+    Route::get('/admin/security', [AdminController::class,'security'])->name('admin.security');
+    Route::post('/admin/security/password', [AdminController::class,'updatePassword'])->name('admin.security.password');
 });
 
 Route::middleware(['auth'])->group(function () {

@@ -37,10 +37,26 @@
             @method('patch')
 
             <label>Name</label>
-            <input type="text" name="name" value="{{ $user->name }}">
+            <input type="text" 
+                   name="name" 
+                   value="{{ $user->name }}"
+                   maxlength="15"
+                   pattern="[^\s]+"
+                   title="Name cannot contain spaces"
+                   onkeypress="return event.charCode !== 32"
+                   oninput="this.value = this.value.replace(/\s/g, '')"
+                   required>
 
             <label>Email</label>
-            <input type="email" name="email" value="{{ $user->email }}">
+            <input type="email" 
+                   name="email" 
+                   value="{{ $user->email }}"
+                   maxlength="50"
+                   pattern="[^\s]+"
+                   title="Email address cannot contain spaces"
+                   onkeypress="return event.charCode !== 32"
+                   oninput="this.value = this.value.replace(/\s/g, '')"
+                   required>
 
             <button class="save-btn">Save</button>
         </form>
@@ -55,13 +71,34 @@
             @method('put')
 
             <label>Current Password</label>
-            <input type="password" name="current_password">
+            <input type="password" 
+                   name="current_password"
+                   maxlength="10"
+                   pattern="[^\s]+"
+                   title="Password cannot contain spaces"
+                   onkeypress="return event.charCode !== 32"
+                   oninput="this.value = this.value.replace(/\s/g, '')"
+                   required>
 
             <label>New Password</label>
-            <input type="password" name="password">
+            <input type="password" 
+                   name="password"
+                   maxlength="10"
+                   pattern="[^\s]+"
+                   title="Password cannot contain spaces"
+                   onkeypress="return event.charCode !== 32"
+                   oninput="this.value = this.value.replace(/\s/g, '')"
+                   required>
 
             <label>Confirm Password</label>
-            <input type="password" name="password_confirmation">
+            <input type="password" 
+                   name="password_confirmation"
+                   maxlength="10"
+                   pattern="[^\s]+"
+                   title="Password cannot contain spaces"
+                   onkeypress="return event.charCode !== 32"
+                   oninput="this.value = this.value.replace(/\s/g, '')"
+                   required>
 
             <button class="save-btn">Change Password</button>
         </form>
@@ -75,7 +112,15 @@
             @csrf
             @method('delete')
 
-            <input type="password" name="password" placeholder="Confirm password">
+            <input type="password" 
+                   name="password" 
+                   placeholder="Confirm password"
+                   maxlength="10"
+                   pattern="[^\s]+"
+                   title="Password cannot contain spaces"
+                   onkeypress="return event.charCode !== 32"
+                   oninput="this.value = this.value.replace(/\s/g, '')"
+                   required>
 
             <button class="delete-btn">Delete Account</button>
         </form>
